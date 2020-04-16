@@ -458,31 +458,27 @@
             // 
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
-            this.Nome.Width = 50;
             // 
             // Sobrenome
             // 
             this.Sobrenome.HeaderText = "Sobrenome";
             this.Sobrenome.Name = "Sobrenome";
-            this.Sobrenome.Width = 65;
             // 
             // CPF
             // 
             this.CPF.HeaderText = "CPF";
             this.CPF.Name = "CPF";
-            this.CPF.Width = 75;
             // 
             // Email
             // 
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
-            this.Email.Width = 70;
             // 
             // DDD
             // 
             this.DDD.HeaderText = "DDD";
             this.DDD.Name = "DDD";
-            this.DDD.Width = 30;
+            this.DDD.Width = 40;
             // 
             // Telefone
             // 
@@ -493,7 +489,6 @@
             // 
             this.DataNasc.HeaderText = "Data de Nascimento";
             this.DataNasc.Name = "DataNasc";
-            this.DataNasc.Width = 60;
             // 
             // Rua
             // 
@@ -504,37 +499,31 @@
             // 
             this.Numero.HeaderText = "Nº";
             this.Numero.Name = "Numero";
-            this.Numero.Width = 40;
             // 
             // Bairro
             // 
             this.Bairro.HeaderText = "Bairro";
             this.Bairro.Name = "Bairro";
-            this.Bairro.Width = 50;
             // 
             // Cidade
             // 
             this.Cidade.HeaderText = "Cidade";
             this.Cidade.Name = "Cidade";
-            this.Cidade.Width = 70;
             // 
             // Estado
             // 
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
-            this.Estado.Width = 70;
             // 
             // País
             // 
             this.País.HeaderText = "País";
             this.País.Name = "País";
-            this.País.Width = 50;
             // 
             // CEP
             // 
             this.CEP.HeaderText = "CEP";
             this.CEP.Name = "CEP";
-            this.CEP.Width = 50;
             // 
             // ConsultarCliente
             // 
