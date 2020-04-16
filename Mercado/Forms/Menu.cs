@@ -59,5 +59,11 @@ namespace Mercado.Forms
             ConsultarCliente cc = new ConsultarCliente();
             cc.ShowDialog();
         }
+
+        private void novaVendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Venda v = new Venda();
+            v.ShowDialog();
+        }
     }
 }

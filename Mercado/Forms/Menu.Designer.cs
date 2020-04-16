@@ -87,14 +87,14 @@
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.cadastroToolStripMenuItem.Text = "Cadastro de Cliente";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
             // listarClientesToolStripMenuItem
             // 
             this.listarClientesToolStripMenuItem.Name = "listarClientesToolStripMenuItem";
-            this.listarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarClientesToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.listarClientesToolStripMenuItem.Text = "Consultar Clientes";
             this.listarClientesToolStripMenuItem.Click += new System.EventHandler(this.listarClientesToolStripMenuItem_Click);
             // 
@@ -139,19 +139,20 @@
             this.novaVendaToolStripMenuItem,
             this.buscarVendaToolStripMenuItem});
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.vendaToolStripMenuItem.Text = "Venda";
             // 
             // novaVendaToolStripMenuItem
             // 
             this.novaVendaToolStripMenuItem.Name = "novaVendaToolStripMenuItem";
-            this.novaVendaToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.novaVendaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novaVendaToolStripMenuItem.Text = "Nova Venda";
+            this.novaVendaToolStripMenuItem.Click += new System.EventHandler(this.novaVendaToolStripMenuItem_Click);
             // 
             // buscarVendaToolStripMenuItem
             // 
             this.buscarVendaToolStripMenuItem.Name = "buscarVendaToolStripMenuItem";
-            this.buscarVendaToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.buscarVendaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.buscarVendaToolStripMenuItem.Text = "Buscar Venda";
             // 
             // relatóriosToolStripMenuItem
