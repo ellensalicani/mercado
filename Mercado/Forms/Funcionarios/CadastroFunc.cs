@@ -39,7 +39,7 @@ namespace Firma.Forms.Funcionarios
             tbBairro.Clear();
             tbCep.Clear();
             tbCidade.Clear();
-            cbCargo.Items.Remove(cbCargo.SelectedItem);
+            cbCargo.Items.Clear();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -119,13 +119,12 @@ namespace Mercado.DAO
             var senha = CreatePassword(6);
 
             var nomeCompleto = nome + " " + sobrenome;
-            var username = nome.Substring(0, 1) + sobrenome.Substring(0, 5);
 
             con = new MySqlConnection();
             cadastrov = new V.FuncionarioV();
             conexao = new Connection();
             con.ConnectionString = conexao.getConnectionString();
-            String query = "update funcionarios set nome = ?nome, sobrenome = ?sobrenome, username = ?username, senha = ?senha, nome_completo = ?nomeCompleto, idade = ?idade, cargo = ?cargo, cpf = ?cpf, ddd = ?ddd, telefone = ?telefone, email = ?email, pais = ?pais, estado = ?estado, rua = ?rua, numero = ?numero, bairro = ?bairro, cep = ?cep, cidade = ?cidade";
+            String query = "update funcionarios set nome = ?nome, sobrenome = ?sobrenome, senha = ?senha, nome_completo = ?nomeCompleto, idade = ?idade, cargo = ?cargo, cpf = ?cpf, ddd = ?ddd, telefone = ?telefone, email = ?email, pais = ?pais, estado = ?estado, rua = ?rua, numero = ?numero, bairro = ?bairro, cep = ?cep, cidade = ?cidade";
             query += " where id = ?id";
             try
             {
@@ -134,7 +133,6 @@ namespace Mercado.DAO
                 cmd.Parameters.AddWithValue("?id", id);
                 cmd.Parameters.AddWithValue("?nome", nome);
                 cmd.Parameters.AddWithValue("?sobrenome", sobrenome);
-                cmd.Parameters.AddWithValue("?username", username);
                 cmd.Parameters.AddWithValue("?senha", senha);
                 cmd.Parameters.AddWithValue("?nomeCompleto", nomeCompleto);
                 cmd.Parameters.AddWithValue("?cargo", cargo);
@@ -153,7 +151,6 @@ namespace Mercado.DAO
                 cmd.ExecuteNonQuery();
                 cmd.Dispose();
 
-                Email.EnviarEmail(username, senha, email);
             }
             catch (Exception ex)
             {

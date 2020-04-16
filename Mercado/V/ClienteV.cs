@@ -58,5 +58,17 @@ namespace Mercado.V
             cdao = new DAO.ClienteDAO();
             cdao.InserirCliente(nome, sobrenome, cpf, ddd, telefone, email, dataNasc, pais, estado, rua, numero, bairro, cep, cidade);
         }
+
+        public void AlterarCliente()
+        {
+            cdao = new DAO.ClienteDAO();
+            cdao.AlterarCliente(id, nome, sobrenome, cpf, ddd, telefone, email, dataNasc, pais, estado, rua, numero, bairro, cep, cidade);
+        }
+
+        public void ExcluirCliente()
+        {
+            cdao = new DAO.ClienteDAO();
+            cdao.ExcluirCliente(id);
+        }
     }
 }
