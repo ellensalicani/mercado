@@ -3,12 +3,12 @@
 ## criar branch nova
 
 estando na master, no git bash, digite: 
-- git clone <linkDoGit> 
-- git checkout <nomeDaBranchNova>
-- git push origin <nomeDaBranchNova>
+- git clone linkDoGit
+- git checkout -b nomeDaBranchNova
+- git push origin nomeDaBranchNova
 
 ## para comitar
 
 - git add .
 - git commit -m "mensagem do commit"
-- git push origin <nomeDaBranchAtual>
+- git push origin nomeDaBranchAtual
