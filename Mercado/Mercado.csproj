@@ -93,6 +93,7 @@
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="Forms\CadastroProdutos.cs">
       <SubType>Form</SubType>
     </Compile>

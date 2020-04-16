@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mercado.DAO
 {
-    class ProdutoDAO
+    public class ProdutoDAO
     {
     }
 }
