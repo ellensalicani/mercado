@@ -2,6 +2,9 @@
 using Firma.Forms.Clientes;
 using Firma.Forms.Funcionarios;
 using Mercado.Forms.Clientes;
+using Mercado.Forms.Fornecedores;
+using Mercado.Forms.Funcionarios;
+using Mercado.Forms.Produtos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,6 +61,36 @@ namespace Mercado.Forms
         {
             ConsultarCliente cc = new ConsultarCliente();
             cc.ShowDialog();
+        }
+
+        private void listarFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarFunc cf = new ConsultarFunc();
+            cf.ShowDialog();
+        }
+
+        private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroProdutos cp = new CadastroProdutos();
+            cp.ShowDialog();
+        }
+
+        private void consultarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarProduto cp = new ConsultarProduto();
+            cp.ShowDialog();
+        }
+
+        private void listarFornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarFornec cf = new ConsultarFornec();
+            cf.ShowDialog();
+        }
+
+        private void cadastrarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroFornec cf = new CadastroFornec();
+            cf.ShowDialog();
         }
     }
 }

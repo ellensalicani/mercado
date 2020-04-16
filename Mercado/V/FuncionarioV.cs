@@ -27,7 +27,7 @@ namespace Mercado.V
         private String username;
         private int idade;
 
-        private DAO.FuncionarioDAO cdao;
+        private DAO.FuncionarioDAO fdao;
 
         public FuncionarioV()
         {
@@ -55,8 +55,20 @@ namespace Mercado.V
 
         public void InserirFuncionario()
         {
-            cdao = new DAO.FuncionarioDAO();
-            cdao.InserirFuncionario(nome, sobrenome, cargo, cpf, ddd, telefone, email, idade, pais, estado, rua, numero, bairro, cep, cidade);
+            fdao = new DAO.FuncionarioDAO();
+            fdao.InserirFuncionario(nome, sobrenome, cargo, cpf, ddd, telefone, email, idade, pais, estado, rua, numero, bairro, cep, cidade);
+        }
+
+        public void AlterarFuncionario()
+        {
+            fdao = new DAO.FuncionarioDAO();
+            fdao.AlterarFuncionario(id, nome, sobrenome, cargo, cpf, ddd, telefone, email, idade, pais, estado, rua, numero, bairro, cep, cidade);
+        }
+
+        public void ExcluirFuncionario()
+        {
+            fdao = new DAO.FuncionarioDAO();
+            fdao.ExcluirFuncionario(id);
         }
     }
 }

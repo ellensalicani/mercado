@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Mercado.Conexao;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,20 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Mercado.Conexao;
-using Mercado.V;
-using MySql.Data.MySqlClient;
 
-namespace Mercado.Forms.Clientes
+namespace Mercado.Forms.Funcionarios
 {
-    public partial class ConsultarCliente : MaterialSkin.Controls.MaterialForm
+    public partial class ConsultarFunc : MaterialSkin.Controls.MaterialForm
     {
-        private V.ClienteV clienteV;
-        private DAO.ClienteDAO clienteDAO;
+        private V.FuncionarioV funcv;
+        private DAO.FuncionarioDAO funcDAO;
         private Connection conexao;
         private Int32 catchRowIndex;
 
-        public ConsultarCliente()
+        public ConsultarFunc()
         {
             InitializeComponent();
         }
@@ -34,13 +33,15 @@ namespace Mercado.Forms.Clientes
             tbDdd.Clear();
             tbTelefone.Clear();
             tbEmail.Clear();
-            tbDataNasc.Clear();
+            tbIdade.Clear();
             tbPais.Clear();
             tbEstado.Clear();
             tbNumero.Clear();
             tbBairro.Clear();
             tbCep.Clear();
             tbCidade.Clear();
+            tbUsername.Clear();
+            cbCargo.Items.Clear();
         }
 
         private void CarregarDados()
@@ -51,7 +52,7 @@ namespace Mercado.Forms.Clientes
             dataGridView1.Refresh();
 
             string connectionString = conexao.getConnectionString();
-            string query = "SELECT id, nome, sobrenome, cpf, email, ddd, telefone, data_nascimento, rua, numero, bairro, cidade, estado, pais, cep FROM cliente";
+            string query = "SELECT id, nome, sobrenome, cpf, cargo, username, email, ddd, telefone, idade, rua, numero, bairro, cidade, estado, pais, cep FROM funcionarios";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -65,7 +66,7 @@ namespace Mercado.Forms.Clientes
                         for (int i = 0; i < dataTable.Rows.Count; i++)
                         {
                             dataGridView1.Rows.Add(dataTable.Rows[i][0], dataTable.Rows[i][1], dataTable.Rows[i][2], dataTable.Rows[i][3], dataTable.Rows[i][4], dataTable.Rows[i][5], dataTable.Rows[i][6], dataTable.Rows[i][7]
-                                , dataTable.Rows[i][8], dataTable.Rows[i][9], dataTable.Rows[i][10], dataTable.Rows[i][11], dataTable.Rows[i][12], dataTable.Rows[i][13], dataTable.Rows[i][14]);
+                                , dataTable.Rows[i][8], dataTable.Rows[i][9], dataTable.Rows[i][10], dataTable.Rows[i][11], dataTable.Rows[i][12], dataTable.Rows[i][13], dataTable.Rows[i][14], dataTable.Rows[i][15], dataTable.Rows[i][16]);
                         }
                     }
                     catch (Exception ex)
@@ -87,28 +88,30 @@ namespace Mercado.Forms.Clientes
                 tbNome.Text = row.Cells[1].Value.ToString();
                 tbSobrenome.Text = row.Cells[2].Value.ToString();
                 tbCpf.Text = row.Cells[3].Value.ToString();
-                tbEmail.Text = row.Cells[4].Value.ToString();
-                tbDdd.Text = row.Cells[5].Value.ToString();
-                tbTelefone.Text = row.Cells[6].Value.ToString();
-                tbDataNasc.Text = row.Cells[7].Value.ToString();
-                tbRua.Text = row.Cells[8].Value.ToString();
-                tbNumero.Text = row.Cells[9].Value.ToString();
-                tbBairro.Text = row.Cells[10].Value.ToString();
-                tbCidade.Text = row.Cells[11].Value.ToString();
-                tbEstado.Text = row.Cells[12].Value.ToString();
-                tbPais.Text = row.Cells[13].Value.ToString();
-                tbCep.Text = row.Cells[14].Value.ToString();
+                cbCargo.Text = row.Cells[4].Value.ToString();
+                tbUsername.Text = row.Cells[5].Value.ToString();
+                tbEmail.Text = row.Cells[6].Value.ToString();
+                tbDdd.Text = row.Cells[7].Value.ToString();
+                tbTelefone.Text = row.Cells[8].Value.ToString();
+                tbIdade.Text = row.Cells[9].Value.ToString();
+                tbRua.Text = row.Cells[10].Value.ToString();
+                tbNumero.Text = row.Cells[11].Value.ToString();
+                tbBairro.Text = row.Cells[12].Value.ToString();
+                tbCidade.Text = row.Cells[13].Value.ToString();
+                tbEstado.Text = row.Cells[14].Value.ToString();
+                tbPais.Text = row.Cells[15].Value.ToString();
+                tbCep.Text = row.Cells[16].Value.ToString();
             }
         }
 
-        private void ConsultarCliente_Load(object sender, EventArgs e)
+        private void ConsultarFunc_Load(object sender, EventArgs e)
         {
             CarregarDados();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-           if(tbId.Text != "")
+            if(tbId.Text != "")
             {
                 tbNome.Enabled = true;
                 tbSobrenome.Enabled = true;
@@ -116,7 +119,7 @@ namespace Mercado.Forms.Clientes
                 tbEmail.Enabled = true;
                 tbDdd.Enabled = true;
                 tbTelefone.Enabled = true;
-                tbDataNasc.Enabled = true;
+                tbIdade.Enabled = true;
                 tbRua.Enabled = true;
                 tbNumero.Enabled = true;
                 tbBairro.Enabled = true;
@@ -124,10 +127,10 @@ namespace Mercado.Forms.Clientes
                 tbEstado.Enabled = true;
                 tbPais.Enabled = true;
                 tbCep.Enabled = true;
-            }
-            else
+                cbCargo.Enabled = true;
+            } else
             {
-                MessageBox.Show("Selecione um cliente para habilitar os campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Selecione um funcionário para habilitar os campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -136,22 +139,23 @@ namespace Mercado.Forms.Clientes
             try
             {
 
-                clienteV = new ClienteV();
-                clienteV.Nome = tbNome.Text;
-                clienteV.Sobrenome = tbSobrenome.Text;
-                clienteV.Cpf = tbCpf.Text;
-                clienteV.Ddd = Convert.ToInt32(tbDdd.Text);
-                clienteV.Telefone = Convert.ToInt32(tbTelefone.Text);
-                clienteV.Email = tbEmail.Text;
-                clienteV.DataNasc = Convert.ToDateTime(tbDataNasc.Text);
-                clienteV.Pais = tbPais.Text;
-                clienteV.Estado = tbEstado.Text;
-                clienteV.Rua = tbRua.Text;
-                clienteV.Numero = Convert.ToInt32(tbNumero.Text);
-                clienteV.Bairro = tbBairro.Text;
-                clienteV.Cep = Convert.ToInt32(tbCep.Text);
-                clienteV.Cidade = tbCidade.Text;
-                clienteV.AlterarCliente();
+                funcv = new V.FuncionarioV();
+                funcv.Nome = tbNome.Text;
+                funcv.Sobrenome = tbSobrenome.Text;
+                funcv.Cpf = tbCpf.Text;
+                funcv.Ddd = Convert.ToInt32(tbDdd.Text);
+                funcv.Telefone = Convert.ToInt32(tbTelefone.Text);
+                funcv.Email = tbEmail.Text;
+                funcv.Idade = Convert.ToInt32(tbIdade.Text);
+                funcv.Pais = tbPais.Text;
+                funcv.Estado = tbEstado.Text;
+                funcv.Rua = tbRua.Text;
+                funcv.Numero = Convert.ToInt32(tbNumero.Text);
+                funcv.Bairro = tbBairro.Text;
+                funcv.Cep = Convert.ToInt32(tbCep.Text);
+                funcv.Cidade = tbCidade.Text;
+                funcv.Cargo = cbCargo.SelectedText;
+                funcv.AlterarFuncionario();
                 limparCampos();
                 CarregarDados();
 
@@ -172,19 +176,19 @@ namespace Mercado.Forms.Clientes
             {
                 try
                 {
-                    clienteV = new ClienteV();
-                    clienteV.Id = Convert.ToInt32(tbId.Text);
-                    clienteV.ExcluirCliente();
+                    funcv = new V.FuncionarioV();
+                    funcv.Id = Convert.ToInt32(tbId.Text);
+                    funcv.ExcluirFuncionario();
 
                     limparCampos();
 
-                    MessageBox.Show("Dados atualizados com sucesso!!", "Sucesso", MessageBoxButtons.OK
+                    MessageBox.Show("Funcionário excluido com sucesso!!", "Sucesso", MessageBoxButtons.OK
                        , MessageBoxIcon.Information);
                     CarregarDados();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao deletar cliente: " + ex);
+                    MessageBox.Show("Erro ao deletar funcionário: " + ex);
                 }
             }
             else

@@ -91,13 +91,32 @@
     <Compile Include="Conexao\Connection.cs" />
     <Compile Include="DAO\CadastroDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\FornecedorDAO.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
-    <Compile Include="Forms\CadastroProdutos.cs">
+    <Compile Include="Forms\Fornecedores\CadastroFornec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CadastroProdutos.Designer.cs">
+    <Compile Include="Forms\Fornecedores\CadastroFornec.Designer.cs">
+      <DependentUpon>CadastroFornec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fornecedores\ConsultarFornec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fornecedores\ConsultarFornec.Designer.cs">
+      <DependentUpon>ConsultarFornec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\ConsultarFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\ConsultarFunc.Designer.cs">
+      <DependentUpon>ConsultarFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Produtos\CadastroProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Produtos\CadastroProdutos.Designer.cs">
       <DependentUpon>CadastroProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Clientes\CadastroCliente.cs">
@@ -130,6 +149,12 @@
     <Compile Include="Forms\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Produtos\ConsultarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Produtos\ConsultarProduto.Designer.cs">
+      <DependentUpon>ConsultarProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Sobre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,22 +171,39 @@
     </Compile>
     <Compile Include="V\CadastroV.cs" />
     <Compile Include="V\ClienteV.cs" />
+    <Compile Include="V\FornecedorV.cs" />
     <Compile Include="V\FuncionarioV.cs" />
     <Compile Include="V\LoginV.cs" />
+    <Compile Include="V\ProdutoV.cs" />
     <EmbeddedResource Include="Forms\Clientes\CadastroCliente.resx">
       <DependentUpon>CadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Clientes\ConsultarCliente.resx">
       <DependentUpon>ConsultarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fornecedores\CadastroFornec.resx">
+      <DependentUpon>CadastroFornec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fornecedores\ConsultarFornec.resx">
+      <DependentUpon>ConsultarFornec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Funcionarios\CadastroFunc.resx">
       <DependentUpon>CadastroFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Funcionarios\ConsultarFunc.resx">
+      <DependentUpon>ConsultarFunc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Produtos\CadastroProdutos.resx">
+      <DependentUpon>CadastroProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Produtos\ConsultarProduto.resx">
+      <DependentUpon>ConsultarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sobre.resx">
       <DependentUpon>Sobre.cs</DependentUpon>
