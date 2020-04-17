@@ -95,7 +95,12 @@
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
+<<<<<<< HEAD
     <Compile Include="Forms\Fornecedores\CadastroFornec.cs">
+=======
+    <Compile Include="DAO\VendaDAO.cs" />
+    <Compile Include="Forms\CadastroProdutos.cs">
+>>>>>>> c49af34f62ba71f1b20a248a5683b4307c66d452
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Fornecedores\CadastroFornec.Designer.cs">
@@ -130,6 +135,12 @@
     </Compile>
     <Compile Include="Forms\Clientes\ConsultarCliente.Designer.cs">
       <DependentUpon>ConsultarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Venda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Venda.Designer.cs">
+      <DependentUpon>Venda.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Funcionarios\CadastroFunc.cs">
       <SubType>Form</SubType>
@@ -174,7 +185,11 @@
     <Compile Include="V\FornecedorV.cs" />
     <Compile Include="V\FuncionarioV.cs" />
     <Compile Include="V\LoginV.cs" />
+<<<<<<< HEAD
     <Compile Include="V\ProdutoV.cs" />
+=======
+    <Compile Include="V\VendaV.cs" />
+>>>>>>> c49af34f62ba71f1b20a248a5683b4307c66d452
     <EmbeddedResource Include="Forms\Clientes\CadastroCliente.resx">
       <DependentUpon>CadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sobre.resx">
       <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Venda.resx">
+      <DependentUpon>Venda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

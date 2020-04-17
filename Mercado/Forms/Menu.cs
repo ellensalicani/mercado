@@ -63,6 +63,7 @@ namespace Mercado.Forms
             cc.ShowDialog();
         }
 
+<<<<<<< HEAD
         private void listarFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ConsultarFunc cf = new ConsultarFunc();
@@ -91,6 +92,12 @@ namespace Mercado.Forms
         {
             CadastroFornec cf = new CadastroFornec();
             cf.ShowDialog();
+=======
+        private void novaVendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Venda v = new Venda();
+            v.ShowDialog();
+>>>>>>> c49af34f62ba71f1b20a248a5683b4307c66d452
         }
     }
 }
