@@ -79,5 +79,10 @@ namespace Firma.Forms.Clientes
                 MessageBox.Show("Erro ao cadastrar cliente: " + ex);
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

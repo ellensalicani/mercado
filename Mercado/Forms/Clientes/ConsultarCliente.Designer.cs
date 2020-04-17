@@ -29,6 +29,21 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataNasc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.País = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbPais = new System.Windows.Forms.TextBox();
             this.tbCidade = new System.Windows.Forms.TextBox();
             this.tbCep = new System.Windows.Forms.TextBox();
@@ -66,21 +81,6 @@
             this.btnEdit = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnExcluir = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnSalvar = new MaterialSkin.Controls.MaterialFlatButton();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DDD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataNasc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.País = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,6 +108,86 @@
             this.dataGridView1.Size = new System.Drawing.Size(805, 248);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Id.Width = 30;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Sobrenome
+            // 
+            this.Sobrenome.HeaderText = "Sobrenome";
+            this.Sobrenome.Name = "Sobrenome";
+            // 
+            // CPF
+            // 
+            this.CPF.HeaderText = "CPF";
+            this.CPF.Name = "CPF";
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // DDD
+            // 
+            this.DDD.HeaderText = "DDD";
+            this.DDD.Name = "DDD";
+            this.DDD.Width = 40;
+            // 
+            // Telefone
+            // 
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.Name = "Telefone";
+            // 
+            // DataNasc
+            // 
+            this.DataNasc.HeaderText = "Data de Nascimento";
+            this.DataNasc.Name = "DataNasc";
+            // 
+            // Rua
+            // 
+            this.Rua.HeaderText = "Rua";
+            this.Rua.Name = "Rua";
+            // 
+            // Numero
+            // 
+            this.Numero.HeaderText = "Nº";
+            this.Numero.Name = "Numero";
+            // 
+            // Bairro
+            // 
+            this.Bairro.HeaderText = "Bairro";
+            this.Bairro.Name = "Bairro";
+            // 
+            // Cidade
+            // 
+            this.Cidade.HeaderText = "Cidade";
+            this.Cidade.Name = "Cidade";
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
+            // País
+            // 
+            this.País.HeaderText = "País";
+            this.País.Name = "País";
+            // 
+            // CEP
+            // 
+            this.CEP.HeaderText = "CEP";
+            this.CEP.Name = "CEP";
             // 
             // tbPais
             // 
@@ -445,85 +525,6 @@
             this.btnSalvar.TabIndex = 69;
             this.btnSalvar.Text = "Salvar Alterações";
             this.btnSalvar.UseVisualStyleBackColor = true;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Id.Width = 30;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Sobrenome
-            // 
-            this.Sobrenome.HeaderText = "Sobrenome";
-            this.Sobrenome.Name = "Sobrenome";
-            // 
-            // CPF
-            // 
-            this.CPF.HeaderText = "CPF";
-            this.CPF.Name = "CPF";
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // DDD
-            // 
-            this.DDD.HeaderText = "DDD";
-            this.DDD.Name = "DDD";
-            this.DDD.Width = 40;
-            // 
-            // Telefone
-            // 
-            this.Telefone.HeaderText = "Telefone";
-            this.Telefone.Name = "Telefone";
-            // 
-            // DataNasc
-            // 
-            this.DataNasc.HeaderText = "Data de Nascimento";
-            this.DataNasc.Name = "DataNasc";
-            // 
-            // Rua
-            // 
-            this.Rua.HeaderText = "Rua";
-            this.Rua.Name = "Rua";
-            // 
-            // Numero
-            // 
-            this.Numero.HeaderText = "Nº";
-            this.Numero.Name = "Numero";
-            // 
-            // Bairro
-            // 
-            this.Bairro.HeaderText = "Bairro";
-            this.Bairro.Name = "Bairro";
-            // 
-            // Cidade
-            // 
-            this.Cidade.HeaderText = "Cidade";
-            this.Cidade.Name = "Cidade";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
-            // País
-            // 
-            this.País.HeaderText = "País";
-            this.País.Name = "País";
-            // 
-            // CEP
-            // 
-            this.CEP.HeaderText = "CEP";
-            this.CEP.Name = "CEP";
             // 
             // ConsultarCliente
             // 

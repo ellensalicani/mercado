@@ -33,6 +33,7 @@ namespace Mercado.Forms.Clientes
 
             string connectionString = conexao.getConnectionString();
             string query = "SELECT id, nome, sobrenome, cpf, email, ddd, telefone, data_nascimento, rua, numero, bairro, cidade, estado, pais, cep FROM cliente";
+            //string query = "select * from produto";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -74,6 +75,11 @@ namespace Mercado.Forms.Clientes
         private void ConsultarCliente_Load(object sender, EventArgs e)
         {
             CarregarDados();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

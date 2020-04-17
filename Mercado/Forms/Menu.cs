@@ -59,5 +59,16 @@ namespace Mercado.Forms
             ConsultarCliente cc = new ConsultarCliente();
             cc.ShowDialog();
         }
+
+        private void listarFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void produtosDisponíveisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Relatorio.RelatorioProduto relProd = new Relatorio.RelatorioProduto();
+            relProd.ShowDialog();
+        }
     }
 }
