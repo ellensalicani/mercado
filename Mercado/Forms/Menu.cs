@@ -5,6 +5,7 @@ using Mercado.Forms.Clientes;
 using Mercado.Forms.Fornecedores;
 using Mercado.Forms.Funcionarios;
 using Mercado.Forms.Produtos;
+using Mercado.Forms.Venda;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,7 +64,6 @@ namespace Mercado.Forms
             cc.ShowDialog();
         }
 
-<<<<<<< HEAD
         private void listarFuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ConsultarFunc cf = new ConsultarFunc();
@@ -90,14 +90,15 @@ namespace Mercado.Forms
 
         private void cadastrarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroFornec cf = new CadastroFornec();
+            CadastrarFornec cf = new CadastrarFornec();
             cf.ShowDialog();
-=======
+        }
+
         private void novaVendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Venda v = new Venda();
+            RegistroVenda v = new RegistroVenda();
             v.ShowDialog();
->>>>>>> c49af34f62ba71f1b20a248a5683b4307c66d452
+
         }
     }
 }

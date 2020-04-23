@@ -1,5 +1,4 @@
 ﻿using Mercado.Conexao;
-using Mercado.DAO;
 using Mercado.V;
 using System;
 using System.Collections.Generic;
@@ -13,13 +12,13 @@ using System.Windows.Forms;
 
 namespace Mercado.Forms.Fornecedores
 {
-    public partial class CadastroFornec : MaterialSkin.Controls.MaterialForm
+    public partial class CadastrarFornec : MaterialSkin.Controls.MaterialForm
     {
         private FornecedorV fornV;
-        private FornecedorDAO fornDAO;
+        private DAO.FornecedorDAO fornDAO;
         private Connection conexao;
 
-        public CadastroFornec()
+        public CadastrarFornec()
         {
             InitializeComponent();
         }

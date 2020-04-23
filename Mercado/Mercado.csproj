@@ -95,16 +95,12 @@
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
-<<<<<<< HEAD
-    <Compile Include="Forms\Fornecedores\CadastroFornec.cs">
-=======
     <Compile Include="DAO\VendaDAO.cs" />
-    <Compile Include="Forms\CadastroProdutos.cs">
->>>>>>> c49af34f62ba71f1b20a248a5683b4307c66d452
+    <Compile Include="Forms\Fornecedores\CadastrarFornec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Fornecedores\CadastroFornec.Designer.cs">
-      <DependentUpon>CadastroFornec.cs</DependentUpon>
+    <Compile Include="Forms\Fornecedores\CadastrarFornec.Designer.cs">
+      <DependentUpon>CadastrarFornec.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Fornecedores\ConsultarFornec.cs">
       <SubType>Form</SubType>
@@ -136,12 +132,6 @@
     <Compile Include="Forms\Clientes\ConsultarCliente.Designer.cs">
       <DependentUpon>ConsultarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Venda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Venda.Designer.cs">
-      <DependentUpon>Venda.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Funcionarios\CadastroFunc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +162,12 @@
     <Compile Include="Forms\Sobre.Designer.cs">
       <DependentUpon>Sobre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Venda\RegistroVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Venda\RegistroVenda.Designer.cs">
+      <DependentUpon>RegistroVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Email.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -185,19 +181,13 @@
     <Compile Include="V\FornecedorV.cs" />
     <Compile Include="V\FuncionarioV.cs" />
     <Compile Include="V\LoginV.cs" />
-<<<<<<< HEAD
     <Compile Include="V\ProdutoV.cs" />
-=======
     <Compile Include="V\VendaV.cs" />
->>>>>>> c49af34f62ba71f1b20a248a5683b4307c66d452
     <EmbeddedResource Include="Forms\Clientes\CadastroCliente.resx">
       <DependentUpon>CadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Clientes\ConsultarCliente.resx">
       <DependentUpon>ConsultarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Fornecedores\CadastroFornec.resx">
-      <DependentUpon>CadastroFornec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Fornecedores\ConsultarFornec.resx">
       <DependentUpon>ConsultarFornec.cs</DependentUpon>
@@ -223,8 +213,8 @@
     <EmbeddedResource Include="Forms\Sobre.resx">
       <DependentUpon>Sobre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Venda.resx">
-      <DependentUpon>Venda.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Venda\RegistroVenda.resx">
+      <DependentUpon>RegistroVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -266,5 +256,6 @@
   <ItemGroup>
     <None Include="Resources\market.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

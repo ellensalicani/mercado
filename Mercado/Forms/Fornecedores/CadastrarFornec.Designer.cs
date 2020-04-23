@@ -1,6 +1,6 @@
 ﻿namespace Mercado.Forms.Fornecedores
 {
-    partial class CadastroFornec
+    partial class CadastrarFornec
     {
         /// <summary>
         /// Required designer variable.
@@ -375,7 +375,6 @@
             this.Text = "Cadastro de Fornecedor";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -411,5 +410,6 @@
         private System.Windows.Forms.TextBox tbPais;
         private System.Windows.Forms.TextBox tbCep;
         private MaterialSkin.Controls.MaterialFlatButton btnCadastrar;
+
     }
 }
